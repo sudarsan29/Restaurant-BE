@@ -1,4 +1,4 @@
 module.exports = {
-    MONGODB_URL: "process.config.MONGODB_URL",
-    JWT_SECRET: "process.config.JWT_SECRET"
+    MONGODB_URL: "mongodb://127.0.0.1:27017/restaurant",
+    JWT_SECRET: "jhvuyvouewyvoqooojoioihqbvghxa"
 }
