@@ -3,7 +3,7 @@ const app = express();
 const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
-const {MONGODB_URL} = require('./config');
+const {MONGODB_URL} = process.env;
 
 mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
