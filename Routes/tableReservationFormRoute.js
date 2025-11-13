@@ -51,7 +51,7 @@ router.get('/all-reservations', async (req, res) => {
   }
 });
 
-router.delete('/delete-tableReservation/:id', async (req, res) => {
+router.delete('/delete-tableReservation', async (req, res) => {
   try {
     const deletedReservation = await TableReservation.findByIdAndDelete(req.params.id);
     if (!deletedReservation) {

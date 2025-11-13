@@ -3,16 +3,15 @@ const app = express();
 const PORT = 4000;
 const cors = require('cors');
 const mongoose = require('mongoose');
-const {MONGODB_URL} = process.env;
+const {MONGODB_URL} = require('./config');
 
 mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  family: 4
 });
 
-
 mongoose.connection.on('connected',  () => {
-    
     console.log("MongoDB connected");
 });
 
